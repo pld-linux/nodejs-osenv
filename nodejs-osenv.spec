@@ -1,20 +1,20 @@
 %define		pkg	osenv
-Summary:	Recursively mkdir, like "mkdir -p"
+Summary:	Look up environment settings specific to different operating systems
 Name:		nodejs-%{pkg}
-Version:	0.0.3
+Version:	0.1.0
 Release:	1
 License:	MIT
 Group:		Development/Libraries
-URL:		https://github.com/isaacs/osenv
 Source0:	http://registry.npmjs.org/osenv/-/%{pkg}-%{version}.tgz
-# Source0-md5:	f42ac372960369633871ab3550cb43fb
+# Source0-md5:	91aa897b4cd6d64aa19d6c4ee4ede70a
+URL:		https://github.com/isaacs/osenv
 BuildRequires:	rpmbuild(macros) >= 1.634
 Requires:	nodejs
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Recursively mkdir, like "mkdir -p".
+Look up environment settings specific to different operating systems.
 
 %prep
 %setup -qc
